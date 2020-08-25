@@ -1,0 +1,12 @@
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.BLL\bin\Debug\netcoreapp3.1\BookStore.BLL.deps.json
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.BLL\bin\Debug\netcoreapp3.1\BookStore.BLL.dll
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.BLL\bin\Debug\netcoreapp3.1\BookStore.BLL.pdb
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.BLL\obj\Debug\netcoreapp3.1\BookStore.BLL.csprojAssemblyReference.cache
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.BLL\obj\Debug\netcoreapp3.1\BookStore.BLL.AssemblyInfoInputs.cache
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.BLL\obj\Debug\netcoreapp3.1\BookStore.BLL.AssemblyInfo.cs
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.BLL\obj\Debug\netcoreapp3.1\BookStore.BLL.dll
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.BLL\obj\Debug\netcoreapp3.1\BookStore.BLL.pdb
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.BLL\obj\Debug\netcoreapp3.1\BookStore.BLL.csproj.CoreCompileInputs.cache
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.BLL\bin\Debug\netcoreapp3.1\BookStore.DAL.dll
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.BLL\bin\Debug\netcoreapp3.1\BookStore.DAL.pdb
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.BLL\obj\Debug\netcoreapp3.1\BookStore.BLL.csproj.CopyComplete

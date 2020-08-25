@@ -1,0 +1,116 @@
+<div class="book-data-container">
+  <div class="book-add">
+    <table class='table table-striped'>
+      <tbody>
+        <tr>
+          <td>
+            <div>Name</div>
+            <input type="text" class="form-control" placeholder="name"
+                   [(ngModel)]="newBook.name" #name="ngModel" required />
+            <div [hidden]="name.valid || name.untouched" class="alert alert-danger">
+              Name is not valid
+            </div>
+          </td>
+          <td>
+            <div>Text</div>
+            <input type="text" class="form-control" placeholder="text"
+                   [(ngModel)]="newBook.text" #text="ngModel" required />
+            <div [hidden]="text.valid || text.untouched" class="alert alert-danger">
+              Text is not valid
+            </div>
+          </td>
+          <td>
+            <div>Price</div>
+            <input type="number" class="form-control" placeholder="0"
+                   [(ngModel)]="newBook.price" #price="ngModel" required />
+            <div [hidden]="price.valid || price.untouched" class="alert alert-danger">
+              Number is not valid
+            </div>
+          </td>
+          <td>
+            <button class="btn btn-primary" [disabled]="name.invalid || text.invalid || price.invalid"
+                    (click)="saveBook()">
+              Add
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="book-table">
+    <div>
+      <label class="control">
+        Max rows
+        <input type="number" class="input form-control" min="1" [(ngModel)]="config.itemsPerPage">
+      </label>
+    </div>
+
+    <table class='table table-striped'>
+      <thead>
+        <tr>
+          <th><span>Name</span></th>
+          <th><span>Text</span></th>
+          <th><span>Price</span></th>
+          <th><span></span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let b of books | paginate: config">
+          <ng-template [ngIf]="book?.id != b.id" [ngIfElse]="editTemplate">
+            <td>{{b?.name}}</td>
+            <td>{{b?.text}}</td>
+            <td>{{b?.price}}</td>
+            <td class="button-group">
+              <button class="btn btn-sm btn-primary" (click)="editBook(b)">Edit</button>
+              <button class="btn btn-sm btn-danger" (click)="deleteBook(b)">Delete</button>
+            </td>
+          </ng-template>
+        </tr>
+      </tbody>
+    </table>
+    <div class="has-text-centered">
+      <pagination-controls [id]="config.id"
+                           [maxSize]="maxSize"
+                           [directionLinks]="directionLinks"
+                           [autoHide]="autoHide"
+                           [responsive]="responsive"
+                           [previousLabel]="labels.previousLabel"
+                           [nextLabel]="labels.nextLabel"
+                           [screenReaderPaginationLabel]="labels.screenReaderPaginationLabel"
+                           [screenReaderPageLabel]="labels.screenReaderPageLabel"
+                           [screenReaderCurrentLabel]="labels.screenReaderCurrentLabel"
+                           (pageChange)="onPageChange($event)"
+                           (pageBoundsCorrection)="onPageBoundsCorrection($event)"></pagination-controls>
+    </div>
+  </div>
+</div>
+
+<ng-template #editTemplate>
+  <td>
+    <input type="text" class="form-control"
+           [(ngModel)]="book.name" #name="ngModel" required />
+    <div [hidden]="name.valid || name.untouched" class="alert alert-danger">
+      Name is not valid
+    </div>
+  </td>
+  <td>
+    <input type="text" class="form-control"
+           [(ngModel)]="book.text" #text="ngModel" required />
+    <div [hidden]="text.valid || text.untouched" class="alert alert-danger">
+      Text is not valid
+    </div>
+  </td>
+  <td>
+    <input type="number" class="form-control"
+           [(ngModel)]="book.price" #price="ngModel" required />
+    <div [hidden]="price.valid || price.untouched" class="alert alert-danger">
+      Price is not valid
+    </div>
+  </td>
+  <td class="button-group">
+    <input type="button" [disabled]="name.invalid || text.invalid || price.invalid" value="Save" (click)="saveBook()" class="btn btn-sm btn-success" />
+    <input type="button" value="Cancel" (click)="cancel()" class="btn btn-sm btn-warning" />
+  </td>
+</ng-template>
+

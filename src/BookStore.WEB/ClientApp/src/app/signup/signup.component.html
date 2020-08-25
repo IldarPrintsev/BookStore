@@ -1,0 +1,41 @@
+<form class="form-signin" #loginForm="ngForm" (ngSubmit)="signUp(loginForm)">
+  <div class="container-fluid" style="width: 400px;">
+    <h2 class="form-signin-heading">Registration</h2>
+    <div *ngIf="invalidLogin" class="alert alert-danger">This email address is already in use</div>
+    <br />
+    <label for="email" class="sr-only">Email</label>
+    <input type="email" #email="ngModel" id="email" name="email" ngModel
+           class="form-control" placeholder="email" pattern="[a-zA-Z_]+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}" required autofocus>
+    <div [hidden]="email.valid || email.untouched" class="alert alert-danger">
+      Email is required
+    </div>
+    <br />
+    <label for="firstName" class="sr-only">First Name</label>
+    <input type="text" #firstName="ngModel" id="firstName" name="firstName" ngModel class="form-control" placeholder="first name" required>
+    <div *ngIf="firstName.invalid && (firstName.dirty || firstName.touched)" class="alert alert-danger">
+      <div *ngIf="firstName.errors.required">
+        First name is required
+      </div>
+    </div>
+    <br />
+    <label for="lastName" class="sr-only">Last Name</label>
+    <input type="text" #lastName="ngModel" id="lastName" name="lastName" ngModel
+           class="form-control" placeholder="last name" required>
+    <div *ngIf="lastName.invalid && (lastName.dirty || lastName.touched)" class="alert alert-danger">
+      <div *ngIf="lastName.errors.required">
+        Last name is required
+      </div>
+    </div>
+    <br />
+    <label for="password" class="sr-only">Password</label>
+    <input type="password" #password="ngModel" id="password" name="password" ngModel
+           class="form-control" placeholder="password" required>
+    <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+      <div *ngIf="password.errors.required">
+        Password is required
+      </div>
+    </div>
+    <br />
+    <button class="btn btn-lg btn-primary btn-block" type="submit" [disabled]="email.invalid || firstName.invalid || lastName.invalid || password.invalid">Sign up</button>
+  </div>
+</form>

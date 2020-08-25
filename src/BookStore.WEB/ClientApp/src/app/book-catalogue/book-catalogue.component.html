@@ -1,0 +1,55 @@
+<div class="book-data-container">
+  <div class="book-table">
+    <div>
+      <label class="control">
+        Max rows
+        <input type="number" class="input form-control" min="1" [(ngModel)]="config.itemsPerPage">
+      </label>
+    </div>
+    
+    <table class='table table-striped'>
+      <thead>
+        <tr>
+          <th><span>Name</span></th>
+          <th><span>Text</span></th>
+          <th><span>Price</span></th>
+          <th><span></span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let b of books | paginate: config">
+          <td>{{b?.name}}</td>
+          <td>{{b?.text }}</td>
+          <td>{{b?.price}} €</td>
+          <ng-template [ngIf]="isUserAuthenticated()" [ngIfElse]="emptyTemplate">
+            <td class="button-group">
+              <button *ngIf="!b?.isPurchased" class="btn btn-sm btn-primary" (click)="updateSubscription(b)">Subscribe</button>
+              <button *ngIf="b?.isPurchased" class="btn btn-sm btn-danger" (click)="updateSubscription(b)">Unsubscribe</button>
+            </td>
+          </ng-template>
+        </tr>
+      </tbody>
+    </table>
+    <div class="has-text-centered">
+      <pagination-controls [id]="config.id"
+                           [maxSize]="maxSize"
+                           [directionLinks]="directionLinks"
+                           [autoHide]="autoHide"
+                           [responsive]="responsive"
+                           [previousLabel]="labels.previousLabel"
+                           [nextLabel]="labels.nextLabel"
+                           [screenReaderPaginationLabel]="labels.screenReaderPaginationLabel"
+                           [screenReaderPageLabel]="labels.screenReaderPageLabel"
+                           [screenReaderCurrentLabel]="labels.screenReaderCurrentLabel"
+                           (pageChange)="onPageChange($event)"
+                           (pageBoundsCorrection)="onPageBoundsCorrection($event)"></pagination-controls>
+    </div>
+  </div>
+</div>
+
+<ng-template #emptyTemplate>
+  <td>
+    Sign in to Subscribe
+  </td>
+</ng-template>
+

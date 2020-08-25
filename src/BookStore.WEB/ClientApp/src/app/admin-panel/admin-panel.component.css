@@ -1,0 +1,75 @@
+.book-data-container {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.book-table, .book-add {
+  position: relative;
+  clear: both;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+}
+
+.book-add {
+  margin-bottom: 10px;
+}
+
+  .book-add table td {
+    background: white;
+  }
+
+    .book-add table td:last-child {
+      vertical-align: bottom;
+    }
+
+
+.book-table table {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+  .book-table table thead tr {
+    height: 50px;
+  }
+
+  .book-table table td {
+    vertical-align: middle;
+  }
+
+  .book-table table tr {
+    height: 90px;
+  }
+
+input.ng-touched.ng-invalid {
+  border: solid red 2px;
+}
+
+        input.ng-touched.ng-valid {
+  border: solid green 2px;
+}
+
+.alert {
+  padding: 0;
+}
+
+.alert-danger {
+  position: absolute;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.btn {
+  width: 80px;
+}
+
+input {
+  width: 180px;
+}
+
+.control .input {
+  width: 60px;
+}
+
+.button-group {
+  width: 200px;
+}

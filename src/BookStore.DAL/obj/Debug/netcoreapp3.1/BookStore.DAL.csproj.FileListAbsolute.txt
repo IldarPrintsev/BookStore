@@ -1,0 +1,12 @@
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.DAL\bin\Debug\netcoreapp3.1\BookStore.DAL.deps.json
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.DAL\bin\Debug\netcoreapp3.1\BookStore.DAL.dll
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.DAL\bin\Debug\netcoreapp3.1\BookStore.DAL.pdb
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.DAL\obj\Debug\netcoreapp3.1\BookStore.DAL.csprojAssemblyReference.cache
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.DAL\obj\Debug\netcoreapp3.1\BookStore.DAL.AssemblyInfoInputs.cache
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.DAL\obj\Debug\netcoreapp3.1\BookStore.DAL.AssemblyInfo.cs
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.DAL\obj\Debug\netcoreapp3.1\BookStore.DAL.dll
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.DAL\obj\Debug\netcoreapp3.1\BookStore.DAL.pdb
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.DAL\bin\Debug\netcoreapp3.1\BookStore.DAL.runtimeconfig.json
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.DAL\bin\Debug\netcoreapp3.1\BookStore.DAL.runtimeconfig.dev.json
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.DAL\obj\Debug\netcoreapp3.1\BookStore.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Ildar\Documents\PROJECTS\BookStore\src\BookStore.DAL\obj\Debug\netcoreapp3.1\BookStore.DAL.genruntimeconfig.cache
